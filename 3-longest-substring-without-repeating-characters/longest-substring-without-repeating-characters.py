@@ -1,7 +1,10 @@
 class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
         '''
-
+        - init vars: set, pointers and result (because of immutability and window model)
+        - loop through string utilizing right pointer
+        - if it's duplicate, shrink window by removing left element from charset and update left element from string
+        - if not duplicate, add right pointer to charset and update result with max(past window, current window)
         '''
         # initialize set, left pointer and result
         charSet = set()
